@@ -1,4 +1,12 @@
 - hosts: workstation
   become: yes
-  roles:
-    - osp-servers
+
+  tasks:
+
+    - name: Deploy front end instance
+      include_role:
+        name: osp-servers
+        vars_from: frontend.yml
+
+#  roles:
+#    - osp-servers
