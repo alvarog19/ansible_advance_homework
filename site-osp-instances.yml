@@ -1,12 +1,28 @@
-- hosts: workstation
+- hosts: localhost
+  connection: local
   become: yes
 
   tasks:
 
-    - name: Deploy front end instance
+    - name: Deploy frontend instance
       include_role:
         name: osp-servers
         vars_from: frontend.yml
+
+    - name: Deploy app1 instance
+      include_role:
+        name: osp-servers
+        vars_from: app1.yml
+
+    - name: Deploy app2 instance
+      include_role:
+        name: osp-servers
+        vars_from: app2.yml
+
+    - name: Deploy db instance
+      include_role:
+        name: osp-servers
+        vars_from: db.yml
 
 #  roles:
 #    - osp-servers
