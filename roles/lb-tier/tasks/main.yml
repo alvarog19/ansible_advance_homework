@@ -1,7 +1,7 @@
 ---
 # tasks file for lb-tier
 
- - name: Install software
+- name: Install software
    yum:
        name: "{{ _yum_packages }}"
        state: latest
