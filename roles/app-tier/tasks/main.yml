@@ -18,6 +18,12 @@
     dest: /usr/share/tomcat/webapps/ROOT/index.html
     mode: u=rw,go=r
 
+- name: copy static index.html to tomcat default dir
+  template:
+    src: index.html.j2
+    dest: /var/www/html/index.html
+    mode: u=rw,go=r
+
 - name: start and enable tomcat
   service:
     name: tomcat
