@@ -2,9 +2,9 @@
 # tasks file for lb-tier
 
 - name: Install software
-   yum:
-       name: "{{ _yum_packages }}"
-       state: latest
+  yum:
+    name: "{{ _yum_packages }}"
+    state: latest
 
 - name: configure haproxy
   template:
