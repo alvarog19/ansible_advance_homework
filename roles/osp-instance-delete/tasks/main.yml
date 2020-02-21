@@ -15,5 +15,5 @@
       cloud: opscloud
       name: "{{ item.name }}"
       state: absent
-    with_items: "{{ instance.ansible_facts.openstack_servers }}"
+    with_items: "{{ servers.ansible_facts.openstack_servers }}"
    
