@@ -7,13 +7,14 @@
     register: servers
 
   - debug:
-      var: servers
+      msg: "{{ servers }}"
       verbosity: 2
 
   - name: Delete instances
     os_server:
-      cloud: opscloud
+      cloud: ospcloud
       name: "{{ item.name }}"
       state: absent
     with_items: "{{ servers.ansible_facts.openstack_servers }}"
+
    
