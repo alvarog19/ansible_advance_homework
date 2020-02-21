@@ -18,6 +18,7 @@
 
   - name: Fail if 'Ansible has done its job' is not in the page content
     fail:
-    when: "'Ansible has done its job' not in webpage.results[0].content"
-    tags:
-      - osp.smoke
+    when: "'Ansible has done its job' not in webpage.results[0].stdout"
+    
+  - name: Job done
+    debug: msg="Homework QA task completed."
