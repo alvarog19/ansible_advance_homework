@@ -5,7 +5,7 @@
     name:
     - httpd
     - tomcat
-      state: latest
+    state: latest
 
 - name: create ansible tomcat directory
   file:
