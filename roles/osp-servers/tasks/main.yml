@@ -41,4 +41,4 @@
   delegate_to: "{{ inventory_hostname }}"
 
 - debug:
-  msg: "A server instance named {{ instance_name }} with IP {{ instanceip }} was deployed successfully."
+    msg: "A server instance named {{ instance_name }} with IP {{ instanceip }} was deployed successfully."
